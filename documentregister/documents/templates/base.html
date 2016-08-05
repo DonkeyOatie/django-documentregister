@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Django Document Register</title>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+
+    </head>
+    <body id="documentregister-body">
+        <div id='container' class="container">
+            <div id='header' class="row">
+                <h1>{% block h1_title %}Document Register{% endblock %}</h1>
+                {% include "navigation.html" %}
+            </div>
+
+            <div id='body' class="row">
+                {% block body %}{% endblock %}
+            </div>
+
+            <div id='footer' class="row">
+            </div>
+        </div>
+    </body>
+</html>
