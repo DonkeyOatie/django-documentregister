@@ -1,17 +1,29 @@
 {% extends "base.html" %}
 {% load bootstrap %}
 
-{% block body %}
+{% block dr_body %}
 <div class="row">
-    <div class="col-md-6">
-        <form role="form" method="post" action=".">
-            <legend>Document Registration Form</legend>
-            {% csrf_token %}
-            {{ form|bootstrap }}
-            <div class="form-group">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
+    <div class="col-md-12">
+        <legend>Document Registration Form</legend>
+        <div class="col-md-6">
+            <form role="form" method="post" action=".">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 well">
+            <h2><strong>Guidelines</strong></h2>
+            <ul>
+                <li>Select the correct document type from the dropdown</li>
+                <li>Fill in all the details adding a good description</li>
+                <li>Add a link to the document in its online storage location</li>
+                <li>Submit the form</li>
+                <li>Use the generated document number in the title of the document</li>
+            </ul>
+        </div>
     </div>
 </div>
 {% endblock %}
