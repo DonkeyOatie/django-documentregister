@@ -19,7 +19,7 @@
                 <td>{{ object.title }}</td>
                 <td>{{ object.author_name }}</td>
                 <td>{{ object.created_at }}</td>
-                <td><a href="{% url 'edit' pk=object.pk %}" class="btn btn-warning">Edit</a> <a href="{% url 'detail' pk=object.pk %}" class="btn btn-success">View</a></td>
+                <td><a href="{% url 'edit' pk=object.pk %}" class="btn btn-xs btn-warning">Edit</a> <a href="{% url 'detail' pk=object.pk %}" class="btn btn-xs btn-success">View</a></td>
             </tr>
             {% endfor %}
         </tbody>
