@@ -3,13 +3,13 @@
 {% block dr_body %}
 <div class="container">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <h2>{{ object.full_title }}</h2>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-4">
-                {{ object.created_at }}
+        <div class="col-md-5">
+            {{ object.created_at }}
         </div>
     </div>
     <hr>
@@ -21,6 +21,10 @@
             <p><strong>Author Email</strong> <a href="mailto:{{ object.author_email }}">{{ object.author_email }}</a></p>
             <p><strong><a href="{{ object.link }}">Click Here</a></strong> to view the document</p>
         </div>
+        <div class="col-md-6">
+            <a href="{% url 'edit' pk=object.pk %}" class="btn btn-lg btn-warning">Edit</a>
+        </div>
     </div>
+    <hr>
 </div>
 {% endblock %}
