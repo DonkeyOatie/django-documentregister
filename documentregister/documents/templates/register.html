@@ -6,7 +6,7 @@
     <div class="col-md-12">
         <legend>Document Registration Form</legend>
         <div class="col-md-6">
-            <form role="form" method="post" action=".">
+            <form role="form" method="post" action=".{% if object.pk %}/{{ object.pk }}{% endif %}">
                 {% csrf_token %}
                 {{ form|bootstrap }}
                 <div class="form-group">

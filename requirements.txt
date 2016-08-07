@@ -1,4 +1,4 @@
-Django==1.9.4
+Django==1.10
 flake8==2.4
 autopep8==1.2.1
 ipdb==0.8.1
