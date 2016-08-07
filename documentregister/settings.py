@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -131,3 +132,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "documents/static"),
 ]
 MEDIA_ROOT = os.environ.get("MEDIA_ROOT")
+LOGIN_URL = reverse_lazy('login')
+LOGIN_REDIRECT_URL = reverse_lazy('register')
+LOGOUT_REDIRECT_URL = reverse_lazy('login')

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load bootstrap %}
+
+{% block dr_body %}
+<div class="row">
+    <div class="col-md-12">
+        <legend>Document Registration Login</legend>
+        <div class="col-md-6">
+            <form role="form" method="post" action=".">
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6 well">
+            <h2><strong>Welcome</strong></h2>
+            <p>Welcome to the Django document registration system.  Please login</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
