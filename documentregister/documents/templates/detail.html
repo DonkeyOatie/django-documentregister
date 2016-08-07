@@ -3,25 +3,23 @@
 {% block dr_body %}
 <div class="container">
     <div class="row">
-        <div class="row">
-            <div class="col-md-8">
-                <h2>{{ object.full_title }}</h2>
-            </div>
-            <div class="col-md-4">
-                <div class="pull-right">
-                    {{ object.created_at }}
-                </div>
-            </div>
+        <div class="col-md-8">
+            <h2>{{ object.full_title }}</h2>
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-6">
-                <p><strong>Document Type:</strong> {{ object.document_type }}</p>
-                <p><strong>Description</strong> {{ object.description }}</p>
-                <p><strong>Author</strong> {{ object.author_name }}</p>
-                <p><strong>Author Email</strong> <a href="mailto:{{ object.author_email }}">{{ object.author_email }}</a></p>
-                <p><strong><a href="{{ object.link }}">Click Here</a></strong> to view the document</p>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+                {{ object.created_at }}
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <p><strong>Document Type:</strong> {{ object.document_type }}</p>
+            <p><strong>Description</strong> {{ object.description }}</p>
+            <p><strong>Author</strong> {{ object.author_name }}</p>
+            <p><strong>Author Email</strong> <a href="mailto:{{ object.author_email }}">{{ object.author_email }}</a></p>
+            <p><strong><a href="{{ object.link }}">Click Here</a></strong> to view the document</p>
         </div>
     </div>
 </div>
