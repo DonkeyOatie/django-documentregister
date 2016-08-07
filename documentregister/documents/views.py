@@ -47,7 +47,7 @@ class DocumentSearchView(ListView):
                 search=vector
             ).filter(search=query).order_by('-rank')
         else:
-            object_list = Document.objects.all()
+            object_list = Document.objects.all().order_by('-created_at')
         return object_list
 
     def get_context_data(self, **kwargs):
