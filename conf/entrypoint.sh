@@ -42,7 +42,7 @@ case "$1" in
     ;;
     test_coverage)
         source /var/env/bin/activate
-        coverage run --rcfile="/code/.coveragerc" /code/manage.py test core
+        coverage run --rcfile="/code/.coveragerc" /code/documentregister/manage.py test
         mkdir /var/annotated
         coverage annotate --rcfile="/code/.coveragerc"
         coverage report --rcfile="/code/.coveragerc"

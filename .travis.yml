@@ -1,0 +1,30 @@
+language: python
+
+python:
+  - "2.7"
+
+sudo: required
+
+services:
+  - docker
+
+env:
+  DOCKER_COMPOSE_VERSION: 1.5.2
+
+before_install:
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+
+cache:
+  directories:
+    - $HOME/.cache/pip
+    - /var/lib/docker
+
+before_script:
+  - docker-compose up -d db
+  - docker-compose run documentregister setuplocaldb
+
+script:
+  - docker-compose run documentregister test_coverage

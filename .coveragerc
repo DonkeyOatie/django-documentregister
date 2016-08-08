@@ -1,0 +1,13 @@
+[run]
+branch = true
+omit = /code/documentregister/documents/apps.py
+source = /code/documentregister/documents
+
+[paths]
+source = /code/documentregister/documents
+omit = /code/documentregister/documents/apps.py
+
+[report]
+omit = /code/documentregister/documents/apps.py
+show_missing = true
+fail_under = 100
