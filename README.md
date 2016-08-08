@@ -1,4 +1,5 @@
 # django-documentregister
+[![Build Status](https://travis-ci.org/nkhumphreys/django-documentregister.svg?branch=master)](https://travis-ci.org/nkhumphreys/django-documentregister)
 A document registration system built in the Django framework
 
 This project is inspired by working for companies that use google documents and end up with thousands of documents in unstructured folders and no way to reference a particular document.  It is a very simple app built in django that allows you to register a document and receive a document code based on the document type and a numbering system.
