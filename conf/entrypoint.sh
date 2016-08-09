@@ -10,6 +10,7 @@ show_help() {
     setuplocaldb  : Create empty database for django-documentregister
     setupproddb   : Create empty database for production
     test_coverage : runs tests with coverage output
+    test          : runs the django tests without coverage data
     start         : start webserver behind nginx (prod for serving static files)
     """
 }
@@ -55,6 +56,11 @@ case "$1" in
                           |__/
 
 EOF
+    ;;
+    test)
+        source /var/env/bin/activate
+        cd /code/documentregister/
+        /var/env/bin/python manage.py test
     ;;
     start )
         cd /code/documentregister/
