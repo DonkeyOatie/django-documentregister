@@ -38,5 +38,5 @@ script:
 
 after_success:
     # Should I lose sleep over this hack?
-    - sed -i -e 's/\/code/$TRAVIS_BUILD_DIR/g' .coverage
+    - sed -i -e "s#/code#$TRAVIS_BUILD_DIR#g" .coverage
     - coveralls --config_file=.coveragerc --data_file=.coverage
