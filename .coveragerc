@@ -1,13 +1,22 @@
 [run]
 branch = true
-omit = /code/documentregister/documents/apps.py
+omit = 
+  /code/documentregister/documents/apps.py
+  /code/documentregister/documents/admin.py
+  *migrations*
 source = /code/documentregister/documents
 
 [paths]
 source = /code/documentregister/documents
-omit = /code/documentregister/documents/apps.py
+omit = 
+  /code/documentregister/documents/apps.py
+  /code/documentregister/documents/admin.py
+  *migrations*
 
 [report]
-omit = /code/documentregister/documents/apps.py
+omit = 
+  /code/documentregister/documents/apps.py
+  /code/documentregister/documents/admin.py
+  *migrations*
 show_missing = true
 fail_under = 100
