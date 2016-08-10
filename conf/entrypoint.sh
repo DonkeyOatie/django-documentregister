@@ -45,7 +45,6 @@ case "$1" in
         source /var/env/bin/activate
         coverage run --rcfile="/code/.coveragerc" /code/documentregister/manage.py test
         mkdir /var/annotated
-        coverage annotate --rcfile="/code/.coveragerc"
         coverage report --rcfile="/code/.coveragerc"
         cat << "EOF"
   ____                 _     _       _     _
