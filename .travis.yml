@@ -34,7 +34,7 @@ before_script:
   - docker-compose run documentregister setuplocaldb
 
 script:
-  - docker-compose run documentregister test
+  - docker-compose run documentregister test_coverage
 
 after_success:
   - coveralls
