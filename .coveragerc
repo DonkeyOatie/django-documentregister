@@ -1,21 +1,21 @@
 [run]
 branch = true
 omit = 
-  /code/documentregister/documents/apps.py
-  /code/documentregister/documents/admin.py
+  documentregister/documents/apps.py
+  documentregister/documents/admin.py
   *migrations*
-source = /code/documentregister/documents
+source = documentregister/documents
 
 [paths]
-source = /code/documentregister/documents
+source = documentregister/documents
 omit = 
-  /code/documentregister/documents/apps.py
-  /code/documentregister/documents/admin.py
+  documentregister/documents/apps.py
+  documentregister/documents/admin.py
   *migrations*
 
 [report]
 omit = 
-  /code/documentregister/documents/apps.py
-  /code/documentregister/documents/admin.py
+  documentregister/documents/apps.py
+  documentregister/documents/admin.py
   *migrations*
 show_missing = true
