@@ -37,4 +37,4 @@ script:
   - docker-compose run documentregister test_coverage
 
 after_success:
-    - coveralls --rcfile=.coveragecirc
+    - coveralls
