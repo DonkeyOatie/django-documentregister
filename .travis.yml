@@ -22,7 +22,7 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
 
 install: 
-  - pip install coveralls
+  - pip install python-coveralls
 
 cache:
   directories:
@@ -37,4 +37,6 @@ script:
   - docker-compose run documentregister test_coverage
 
 after_success:
+    # Should I lose sleep over this hack?
+    - sed -i -e 's/\/code\//g' .coverage
     - coveralls --config_file=.coveragerc --data_file=.coverage
