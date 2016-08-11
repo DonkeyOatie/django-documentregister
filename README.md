@@ -1,5 +1,6 @@
 # django-documentregister
 [![Build Status](https://travis-ci.org/nkhumphreys/django-documentregister.svg?branch=master)](https://travis-ci.org/nkhumphreys/django-documentregister)
+[![Coverage Status](https://coveralls.io/repos/github/nkhumphreys/django-documentregister/badge.svg?branch=master)](https://coveralls.io/github/nkhumphreys/django-documentregister?branch=master)
 
 A document registration system built in the Django framework
 
