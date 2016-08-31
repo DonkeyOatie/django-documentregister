@@ -18,3 +18,4 @@ docker-compose up -d documentregister
 This is a work in progress and due to using Postgres full text search (I will replace this with elasticsearch eventually) requires django >=1.10
 
 If you want to see my ToDo list check out the public board on trello: https://trello.com/b/6RSsU2r9/documentregister
+
